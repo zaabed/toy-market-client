@@ -1,7 +1,19 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/images/logo.jpeg'
+import { AuthContext } from "../../../providers/AuthProvider";
+import { useContext } from "react";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
+
     return (
         <div className="navbar">
             <div className="navbar-start">
@@ -29,9 +41,32 @@ const Navbar = () => {
                     <li className="font-bold"><Link to='/blogs'>Blogs</Link></li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <Link to='/login' className="btn bg-yellow-200">Login</Link>
+
+            <div className="navbar-end flex items-start">
+
+                <div className='mx-2'>
+                    {user &&
+                        <span>
+                            <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+                                <button><img className='w-12 h-12 rounded-md' src={user.photoURL} alt="" /></button>
+                            </div>
+                        </span>
+                    }
+                </div>
+
+                <div>
+                    {
+                        user ?
+                            <button onClick={handleLogOut} className="btn bg-amber-300">LogOut</button> :
+                            <Link to='/login'><button className="btn bg-amber-300">Login</button>
+                            </Link>
+
+                    }
+
+                </div>
+
             </div>
+
         </div>
     );
 };

@@ -33,15 +33,65 @@ const Home = () => {
             <div className='mt-10'>
                 <p className='font-bold text-center'>SHOP <span className='text-red-600 '>TOY TITANS</span></p>
                 <h1 className='mt-3 font-bold text-center text-5xl'>POPULAR IN<span className='text-purple-500'> OUR STORE</span></h1>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
+                <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-center'>
+                    <div className="card w-96 bg-base-100 shadow-xl mt-10">
+                        <figure className="px-10 pt-10">
+                            <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                    <div className="card w-96 bg-base-100 shadow-xl mt-10">
+                        <figure className="px-10 pt-10">
+                            <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                    <div className="card w-96 bg-base-100 shadow-xl mt-10">
+                        <figure className="px-10 pt-10">
+                            <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                    <div className="card w-96 bg-base-100 shadow-xl mt-10">
+                        <figure className="px-10 pt-10">
+                            <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                    <div className="card w-96 bg-base-100 shadow-xl mt-10">
+                        <figure className="px-10 pt-10">
+                            <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                        </div>
+                    </div>
+                    <div className="card w-96 bg-base-100 shadow-xl mt-10">
+                        <figure className="px-10 pt-10">
+                            <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+
                         </div>
                     </div>
                 </div>

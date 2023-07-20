@@ -1,8 +1,9 @@
+import notFound from '../assets/images/opps.avif';
 
 const NotFoundPage = () => {
     return (
-        <div>
-            <h1>Page Not Found!!</h1>
+        <div className='flex justify-center'>
+            <img src={notFound} alt="" />
         </div>
     );
 };

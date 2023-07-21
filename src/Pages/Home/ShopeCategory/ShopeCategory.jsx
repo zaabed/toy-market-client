@@ -1,7 +1,21 @@
+import { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const ShopeCategory = () => {
+
+    const [toys, setToys] = useState([]);
+    console.log(toys);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/toys')
+            .then(res => res.json())
+            .then(data => {
+                setToys(data)
+            })
+    }, [])
+
+
     return (
         <div className="mt-20">
             <h1 className='mt-3 font-bold text-center text-5xl'>FIND YOUR <span className='text-purple-500'>TOYS</span></h1>
@@ -9,7 +23,7 @@ const ShopeCategory = () => {
                 <TabList className='text-purple-500 font-bold text-1xl'>
                     <Tab>Maple Landmark My Best Blocks</Tab>
                     <Tab>Magz Super 300 Magnetic Building Set</Tab>
-                    <Tab>Blockaroo Magnetic Foam Building Blocks</Tab>
+                    <Tab>HABA Wooden Building Blocks</Tab>
                 </TabList>
 
                 <TabPanel className='mt-10'>

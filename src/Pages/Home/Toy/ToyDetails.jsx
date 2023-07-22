@@ -1,8 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 
 const ToyDetails = () => {
+
     const toyDetails = useLoaderData();
     const { name, details, picture_link } = toyDetails;
+
     return (
         <div className="card card-side bg-base-100 shadow-xl p-10">
             <figure><img src={picture_link} alt="Movie" /></figure>

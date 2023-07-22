@@ -25,6 +25,17 @@ const Navbar = () => {
                         <li className="font-bold "><Link to='/'>Home</Link></li>
                         <li className="font-bold"><Link to='/allToys'>All Toys</Link></li>
                         <li className="font-bold"><Link to='/blogs'>Blogs</Link></li>
+
+                        {
+                            user &&
+
+                            <>
+                                <li className="font-bold"><Link to='/addToy'>Add Toy</Link></li>
+                                <li className="font-bold"><Link to='/myToy'>My Toy</Link></li>
+                            </>
+
+                        }
+
                     </ul>
                 </div>
 
@@ -39,6 +50,17 @@ const Navbar = () => {
                     <li className="font-bold"><Link to='/'>Home</Link></li>
                     <li className="font-bold"><Link to='/allToys'>All Toys</Link></li>
                     <li className="font-bold"><Link to='/blogs'>Blogs</Link></li>
+
+                    {
+                        user &&
+
+                        <>
+                            <li className="font-bold"><Link to='/addToy'>Add Toy</Link></li>
+                            <li className="font-bold"><Link to='/myToy'>My Toy</Link></li>
+                        </>
+
+                    }
+
                 </ul>
             </div>
 
@@ -57,7 +79,10 @@ const Navbar = () => {
                 <div>
                     {
                         user ?
-                            <button onClick={handleLogOut} className="btn bg-amber-300">LogOut</button> :
+                            <>
+                                <button onClick={handleLogOut} className="btn bg-amber-300">LogOut</button>
+
+                            </> :
                             <Link to='/login'><button className="btn bg-amber-300">Login</button>
                             </Link>
 

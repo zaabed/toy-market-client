@@ -20,7 +20,7 @@ const ShopeCategory = () => {
         <div className="mt-20">
             <h1 className='mt-3 font-bold text-center text-5xl'>FIND YOUR <span className='text-purple-500'>TOYS</span></h1>
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 mt-10 gap-5'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 mt-10 gap-10'>
                 {
                     toys.map(toy => <Toy
 

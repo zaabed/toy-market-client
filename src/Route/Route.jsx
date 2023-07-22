@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home/Home";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import SignUp from "../Pages/Login&SignUp/SignUp";
 import Login from "../Pages/Login&SignUp/Login";
+import ToyDetails from "../Pages/Home/Toy/ToyDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -16,6 +18,11 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
+            },
+            {
+                path: '/:id',
+                element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
             },
             {
                 path: '/signUp',

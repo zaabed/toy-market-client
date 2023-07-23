@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const ShowToy = ({ newToy, newToys, setNewToys }) => {
@@ -10,7 +11,7 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
 
         Swal.fire({
             title: 'Are you sure?',
-            text: "You want to delete this file",
+            text: "You want to delete this Toy",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -26,7 +27,7 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Your Toy has been deleted.',
                                 'success'
                             )
 
@@ -37,6 +38,12 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
                     })
             }
         })
+    }
+
+
+    const handleToyUpdate = id => {
+        console.log(id);
+        // fetch(`http://localhost:5000/addToys/${id}`)
     }
 
     return (
@@ -63,7 +70,7 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
                             <button className="btn bg-amber-300 btn-2xl">details</button>
                         </td>
                         <th>
-                            <button className='text-2xl'><FaEdit /></button>
+                            <Link to={`/updateToy/${_id}`}><button onClick={() => handleToyUpdate(_id)} className='text-2xl'><FaEdit /></button></Link>
                         </th>
                         <th>
                             <button onClick={() => handleToyDelete(_id)} className='text-2xl'><FaTrash /></button>

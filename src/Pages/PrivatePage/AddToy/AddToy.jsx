@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
-import { data } from 'autoprefixer';
+import swal from 'sweetalert';
 
 const AddToy = () => {
 
@@ -29,7 +29,17 @@ const AddToy = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+
+                if (data.insertedId) {
+                    swal({
+                        title: "Good job!",
+                        text: "New Toy Added Successfully",
+                        icon: "success",
+                    });
+                }
+
+                form.reset();
+
             })
     }
 

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ShowToy from '../ShowToy/ShowToy';
 
 
 const MyToy = () => {
 
-    const newToys = useLoaderData();
+    const loadedNewToys = useLoaderData();
+    const [newToys, setNewToys] = useState(loadedNewToys);
 
     return (
         <div className='mt-20'>
@@ -15,6 +16,8 @@ const MyToy = () => {
 
                     key={newToy._id}
                     newToy={newToy}
+                    newToys={newToys}
+                    setNewToys={setNewToys}
 
                 ></ShowToy>)
             }

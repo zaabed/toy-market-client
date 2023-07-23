@@ -1,26 +1,47 @@
 import React from 'react';
 import { FaEdit, FaTrash } from "react-icons/fa";
+import Swal from 'sweetalert2';
 
-const ShowToy = ({ newToy }) => {
+const ShowToy = ({ newToy, newToys, setNewToys }) => {
 
     const { _id, toyName, availableQuantity, detailsDescription, photoURL, price, rating, sellerEmail, sellerName } = newToy;
+
+    const handleToyDelete = id => {
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You want to delete this file",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/addToys/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+
+                            const remaining = newToys.filter(nToy => nToy._id !== id);
+                            setNewToys(remaining);
+
+                        }
+                    })
+            }
+        })
+    }
 
     return (
         <div>
             <table className="table ">
-                {/* <thead>
-                    <tr>
-                        <th>Toy Picture</th>
-                        <th>Toy Name</th>
-                        <th>Available Quantity</th>
-                        <th>Seller Name</th>
-                        <th>Seller Email</th>
-                        <th>Price</th>
-                        <th>Rating</th>
-                        <th>Details</th>
-                    </tr>
-                </thead> */}
-
                 <tbody>
                     <tr className='grid grid-cols-1 lg:grid-cols-10 shadow-xl mt-10'>
                         <td>
@@ -45,7 +66,7 @@ const ShowToy = ({ newToy }) => {
                             <button className='text-2xl'><FaEdit /></button>
                         </th>
                         <th>
-                            <button className='text-2xl'><FaTrash /></button>
+                            <button onClick={() => handleToyDelete(_id)} className='text-2xl'><FaTrash /></button>
                         </th>
                     </tr>
                 </tbody>

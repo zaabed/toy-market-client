@@ -1,12 +1,42 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { data } from 'autoprefixer';
 
 const AddToy = () => {
+
     const { user } = useContext(AuthContext);
+
+    const handleAddToy = event => {
+        event.preventDefault();
+        const form = event.target;
+        const toyName = form.name.value;
+        const availableQuantity = form.quantity.value;
+        const sellerName = user?.displayName;
+        const sellerEmail = user?.email;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const detailsDescription = form.details.value;
+        const photoURL = form.photo.value;
+        const addNewToy = { toyName, availableQuantity, sellerName, sellerEmail, price, rating, detailsDescription, photoURL };
+        // console.log(addNewToy);
+
+        fetch('http://localhost:5000/addToys', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(addNewToy)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+    }
+
     return (
         <div className="bg-amber-100 p-24">
             <h2 className="text-3xl font-extrabold mb-10">Add a Toy</h2>
-            <form>
+            <form onSubmit={handleAddToy}>
                 {/* form name and quantity row */}
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">

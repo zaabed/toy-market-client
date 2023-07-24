@@ -40,10 +40,8 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
         })
     }
 
-
-    const handleToyUpdate = id => {
+    const handleDetailsToy = id => {
         console.log(id);
-        // fetch(`http://localhost:5000/addToys/${id}`)
     }
 
     return (
@@ -67,10 +65,10 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
                         <td className='ms-20'><b>Price: ${price}</b></td>
                         <td className='ms-10'><b>Rating: {rating}</b></td>
                         <td>
-                            <button className="btn bg-amber-300 btn-2xl">details</button>
+                            <Link to={`/detailsToy/${_id}`}><button className="btn bg-amber-300 btn-2xl">details</button></Link>
                         </td>
                         <th>
-                            <Link to={`/updateToy/${_id}`}><button onClick={() => handleToyUpdate(_id)} className='text-2xl'><FaEdit /></button></Link>
+                            <Link to={`/updateToy/${_id}`}><button className='text-2xl'><FaEdit /></button></Link>
                         </th>
                         <th>
                             <button onClick={() => handleToyDelete(_id)} className='text-2xl'><FaTrash /></button>

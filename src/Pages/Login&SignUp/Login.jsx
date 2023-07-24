@@ -54,7 +54,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-amber-100">
+            <div className="hero min-h-screen bg-purple-50 mt-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
 
@@ -94,7 +94,7 @@ const Login = () => {
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-amber-300">Login</button>
+                                <button className="btn bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">Login</button>
                             </div>
                             <p>New User? please <Link to='/signUp'><b>SignUp</b></Link> </p>
                             <hr className='mt-4' />

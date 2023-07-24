@@ -2,7 +2,7 @@
 const Blog = () => {
     return (
         <div className=' mt-10 p-5'>
-            <div className="collapse collapse-plus bg-amber-100">
+            <div className="collapse collapse-plus bg-purple-50">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div className="collapse-title text-xl font-medium">
                     Tell us the differences between uncontrolled and controlled components?
@@ -15,7 +15,7 @@ const Blog = () => {
                         An uncontrolled component, maintains its own internal state, and when the user interacts with the component, it updates its own state, which in turn updates the  value.</p>
                 </div>
             </div>
-            <div className="collapse collapse-plus bg-amber-100 mt-2">
+            <div className="collapse collapse-plus bg-purple-50 mt-2">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
                     how to validate react props using propTypes?
@@ -28,7 +28,7 @@ const Blog = () => {
                         There are many different types of PropTypes and all of them have their unique ES6 classes which we can use. We will discuss every type in this article.Below is an example that shows us how to use these PropTypes for type checking in our app. As we discussed already, they are defined as objects with a key and a value pair where the key is the name of the object while value contains the classes which will be used for type checking.</p>
                 </div>
             </div>
-            <div className="collapse collapse-plus bg-amber-100 mt-2">
+            <div className="collapse collapse-plus bg-purple-50 mt-2">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
                     Tell us the difference between nodejs and express js?
@@ -37,7 +37,7 @@ const Blog = () => {
                     <p>Node.js is an open source and cross-platform runtime environment for executing JavaScript code outside of a browser. You need to remember that NodeJS is not a framework and  not a programming language. Most of the people are confused and understand  a framework or a programming language. We often use Node.js for building back-end services like APIs like Web App or Mobile App.  used in production by large companies such as Paypal, Uber, Netflix, Walmart and so on.C, C++, JavaScript.Run-time platform or environment designed for server-side execution of JavaScript.Express is a small framework that sits on top of Node.web server functionality to simplify its APIs and add helpful new features. It makes it easier to organize your  functionality with middle ware and routing. It adds helpful utilities to Node.js's HTTP objects. It facilitates the rendering of dynamic HTTP objects. </p>
                 </div>
             </div>
-            <div className="collapse collapse-plus bg-amber-100 mt-2">
+            <div className="collapse collapse-plus bg-purple-50 mt-2">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
                     What is a custom hook, and why will you create a custom hook?

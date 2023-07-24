@@ -44,7 +44,7 @@ const AddToy = () => {
     }
 
     return (
-        <div className="bg-amber-100 p-24">
+        <div className="bg-purple-50 p-24 mt-10">
             <h2 className="text-3xl font-extrabold mb-10">Add a Toy</h2>
             <form onSubmit={handleAddToy}>
                 {/* form name and quantity row */}
@@ -125,7 +125,7 @@ const AddToy = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Toy" className="btn btn-block bg-amber-300" />
+                <input type="submit" value="Add Toy" className="btn btn-block bg-gradient-to-r from-purple-400 via-pink-500 to-red-500" />
 
             </form>
         </div>

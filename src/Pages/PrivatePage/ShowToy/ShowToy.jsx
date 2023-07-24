@@ -60,12 +60,12 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
                             <h1 className='font-bold'>{toyName}</h1>
                         </td>
                         <td><b>Quantity: {availableQuantity}</b></td>
-                        <td>{sellerName}</td>
+                        <td><b>Name: {sellerName}</b></td>
                         <td>  <h1 className='font-bold'>{sellerEmail} </h1></td>
                         <td className='ms-20'><b>Price: ${price}</b></td>
                         <td className='ms-10'><b>Rating: {rating}</b></td>
                         <td>
-                            <Link to={`/myToy/${_id}`}><button className="btn bg-amber-300 btn-2xl">details</button></Link>
+                            <Link to={`/myToy/${_id}`}><button className="btn bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 btn-2xl">details</button></Link>
                         </td>
                         <th>
                             <Link to={`/updateToy/${_id}`}><button className='text-2xl'><FaEdit /></button></Link>

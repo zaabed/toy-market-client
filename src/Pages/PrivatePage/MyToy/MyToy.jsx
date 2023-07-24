@@ -9,7 +9,9 @@ const MyToy = () => {
     const [newToys, setNewToys] = useState(loadedNewToys);
 
     return (
-        <div className='mt-20'>
+        <div className='mt-10'>
+
+            <h1 className='text-3xl font-bold text-center mt-10'> Here My Added  <span className='text-purple-500'>New Toys</span></h1>
 
             {
                 newToys.map(newToy => <ShowToy

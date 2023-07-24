@@ -11,7 +11,7 @@ const Toy = ({ toy }) => {
                 <p>${price}</p>
                 <p>{rating}</p>
                 <div className=" card-actions justify-end mt-10">
-                    <Link to={`/${_id}`}><button className="btn bg-amber-300">VIEW DETAILS</button></Link>
+                    <Link to={`/${_id}`}><button className="btn bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">VIEW DETAILS</button></Link>
                 </div>
             </div>
         </div>

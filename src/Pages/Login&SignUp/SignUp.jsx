@@ -49,7 +49,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className="hero min-h-screen bg-amber-100">
+        <div className="hero min-h-screen bg-purple-50 mt-10">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
 
@@ -101,7 +101,7 @@ const SignUp = () => {
                             <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn bg-amber-300">SignUp</button>
+                            <button className="btn bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">SignUp</button>
                         </div>
                         <p>Already have an account? please <Link to='/login'><b>Login</b></Link> </p>
                     </form>

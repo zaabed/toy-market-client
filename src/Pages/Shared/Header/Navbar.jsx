@@ -15,7 +15,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar">
+        <div className="navbar bg-purple-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -41,7 +41,7 @@ const Navbar = () => {
 
                 <div className="flex justify-center items-center">
                     <Link><img src={logo} className='w-32 h-24 rounded-md' alt="" /></Link>
-                    <h3 className="font-extrabold text-3xl">TOY <span className="text-yellow-500">TITANS</span></h3>
+                    <h3 className="font-extrabold text-3xl">TOY <span className="text-purple-500">TITANS</span></h3>
                 </div>
 
             </div>
@@ -80,10 +80,10 @@ const Navbar = () => {
                     {
                         user ?
                             <>
-                                <button onClick={handleLogOut} className="btn bg-amber-300">LogOut</button>
+                                <button onClick={handleLogOut} className="btn bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">LogOut</button>
 
                             </> :
-                            <Link to='/login'><button className="btn bg-amber-300">Login</button>
+                            <Link to='/login'><button className="btn bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">Login</button>
                             </Link>
 
                     }

@@ -2,13 +2,21 @@ import banner1 from '../../../assets/images/banner1.avif';
 import banner2 from '../../../assets/images/banner2.avif';
 import banner3 from '../../../assets/images/banner3.avif';
 import banner4 from '../../../assets/images/banner4.avif';
-import c1 from '../../../assets/images/c1.jpg';
-import c2 from '../../../assets/images/c2.jpg';
-import c3 from '../../../assets/images/c3.jpg';
-import c4 from '../../../assets/images/c4.jpg';
-import c5 from '../../../assets/images/c5.jpg';
-import c6 from '../../../assets/images/c6.jpg';
+import Gallery from '../Gallery/Gallery';
 import ShopeCategory from '../ShopeCategory/ShopeCategory';
+import p3 from '../../../assets/images/p3.jpg';
+import p1 from '../../../assets/images/p1.jpg';
+import vector1 from '../../../assets/images/vector1.svg';
+import vector2 from '../../../assets/images/vector2.svg';
+import vector3 from '../../../assets/images/vector3.svg';
+import vector4 from '../../../assets/images/vector4.svg';
+import Marquee from 'react-fast-marquee';
+import brand1 from '../../../assets/images/brand1.webp';
+import brand2 from '../../../assets/images/brand2.webp';
+import brand3 from '../../../assets/images/brand3.webp';
+import brand4 from '../../../assets/images/brand4.webp';
+
+
 
 
 const Home = () => {
@@ -37,80 +45,79 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='mt-10'>
-                <p className='font-bold text-center'>SHOP <span className='text-red-600 '>TOY TITANS</span></p>
-                <h1 className='mt-3 font-bold text-center text-5xl'>POPULAR IN<span className='text-purple-500'> OUR STORE</span></h1>
-                <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-center'>
-                    <div className="card w-96 h-96 bg-base-100 shadow-xl mt-10">
-                        <figure className="px-10 pt-10">
-                            <img src={c4} alt="Shoes" className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title">Trucks</h2>
-                            <p>$15</p>
 
+
+            <div>
+                <Gallery></Gallery>
+            </div>
+
+            <div className='mt-20'>
+                <h1 className='text-3xl font-bold mb-7 text-center'><span className='text-purple-500'>Our Supports</span></h1>
+                <div className=' grid grid-cols-1 lg:grid-cols-4 bg-purple-50 p-5'>
+                    <div className="card lg:card-side">
+                        <figure><img src={vector1} className='w-20 h-20' alt="Album" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Live Support</h2>
+                            <p>Online</p>
                         </div>
                     </div>
-                    <div className="card w-96 h-96 bg-base-100 shadow-xl mt-10">
-                        <figure className="px-10 pt-10">
-                            <img src={c2} alt="Shoes" className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title">Machine Wheel</h2>
-                            <p>$19</p>
-
+                    <div className="card lg:card-side ">
+                        <figure><img src={vector2} className='w-20 h-20' alt="Album" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Buyers Protection</h2>
+                            <p>Guarantee</p>
                         </div>
                     </div>
-                    <div className="card w-96 h-96 bg-base-100 shadow-xl mt-10">
-                        <figure className="px-10 pt-10">
-                            <img src={c3} alt="Shoes" className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title">Shovel</h2>
-                            <p>$25</p>
-
+                    <div className="card lg:card-side ">
+                        <figure><img src={vector3} className='w-20 h-20' alt="Album" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Fast Shipment</h2>
+                            <p>Express</p>
                         </div>
                     </div>
-                    <div className="card w-96 h-96 bg-base-100 shadow-xl mt-10">
-                        <figure className="px-10 pt-10">
-                            <img src={c1} alt="Shoes" className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title">Burnout Rescue</h2>
-                            <p>$15</p>
-
-                        </div>
-                    </div>
-                    <div className="card w-96 h-96 bg-base-100 shadow-xl mt-10">
-                        <figure className="px-10 pt-10">
-                            <img src={c5} alt="Shoes" className="rounded-xl" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title">Ruler</h2>
-                            <p>$11</p>
-
-                        </div>
-                    </div>
-                    <div className="card w-96 h-96 bg-base-100 shadow-xl mt-10">
-                        <figure className="px-10 pt-10">
-                            <img src={c6} alt="Shoes" className="rounded-xl " />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <h2 className="card-title">Toluca</h2>
-                            <p>$17</p>
+                    <div className="card lg:card-side ">
+                        <figure><img src={vector4} className='w-20 h-20' alt="Album" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Best Prices</h2>
+                            <p>Affordable</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* <div className='mt-20'>
-                <h1 className='mt-3 font-bold text-center text-5xl'>OUR <span className='text-purple-500'>SERVICES</span></h1>
+            <div className='mt-20 grid grid-cols-1 lg:grid-cols-2'>
                 <div>
-
+                    <img src={p3} className='rounded-lg' alt="" />
                 </div>
-            </div> */}
+                <div>
+                    <p>CREATIVE APPROACH</p>
+                    <h1 className='text-3xl font-bold mt-7'>We help you take care of the kids</h1>
+                    <p className='mt-7'>Not only do we sell toys, but we also try to make sure that your children are safe playing, learning, and having fun!</p>
+                    <img src={p1} className='rounded-lg mt-20' alt="" />
+                </div>
+            </div>
+
 
             <ShopeCategory></ShopeCategory>
+
+
+            <div className='mt-20 mb-10'>
+                <h1 className='text-3xl text-center font-bold mb-10'>We work with the <span className='text-purple-500'>best brands</span></h1>
+                <Marquee speed={80} className='gap-5' >
+                    <div className="card w-96 h-32 bg-base-100 shadow-xl">
+                        <figure><img src={brand1} alt="Shoes" /></figure>
+                    </div>
+                    <div className="card w-96 h-32 bg-base-100 shadow-xl">
+                        <figure><img src={brand2} alt="Shoes" /></figure>
+                    </div>
+                    <div className="card w-96 h-32 bg-base-100 shadow-xl">
+                        <figure><img src={brand3} alt="Shoes" /></figure>
+                    </div>
+                    <div className="card w-96 h-32 bg-base-100 shadow-xl">
+                        <figure><img src={brand4} alt="Shoes" /></figure>
+                    </div>
+                </Marquee>
+            </div>
 
         </div>
     );

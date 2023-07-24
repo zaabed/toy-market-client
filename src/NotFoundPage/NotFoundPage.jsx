@@ -14,7 +14,7 @@ const NotFoundPage = () => {
     return (
         <div>
             <div className="card-actions justify-center mt-10">
-                <Link to='/'><button onClick={() => handleBack()} className="btn bg-amber-300"><FaArrowLeft></FaArrowLeft>Back Home</button></Link>
+                <Link to='/'><button onClick={() => handleBack()} className="btn bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"><FaArrowLeft></FaArrowLeft>Back Home</button></Link>
             </div>
             <div className='flex justify-center'>
                 <img src={notFound} alt="" />

@@ -9,7 +9,7 @@ const AllToys = () => {
 
     return (
         <div>
-            <h1 className='text-3xl font-bold text-center'> All <span className='text-amber-300'>Toys</span> Page & User Information</h1>
+            <h1 className='text-3xl font-bold text-center mt-10'> All <span className='text-purple-500'>Toys</span> Page & User Information</h1>
             <div className='mt-10'>
                 {
                     allUsersInfo.map(userInfo => <UserInfo

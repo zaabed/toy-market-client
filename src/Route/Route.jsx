@@ -12,6 +12,7 @@ import MyToy from "../Pages/PrivatePage/MyToy/MyToy";
 import AllToys from "../Pages/AllToys/AllToys";
 import UpdateToy from "../Pages/PrivatePage/UpdateToy/UpdateToy";
 import ShowDetailsToy from "../Pages/PrivatePage/ShowDetailsToy/ShowDetailsToy";
+import ToyInfoDetails from "../Pages/AllToys/ToyInfoDetails";
 
 
 
@@ -32,7 +33,13 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allToys',
-                element: <AllToys></AllToys>
+                element: <AllToys></AllToys>,
+                loader: () => fetch('http://localhost:5000/addToys')
+            },
+            {
+                path: '/allToys/:id',
+                element: <ToyInfoDetails></ToyInfoDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/addToys/allToys/${params.id}`)
             },
             {
                 path: '/blogs',

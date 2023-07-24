@@ -34,7 +34,6 @@ const Login = () => {
         googleAuth()
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
                 setSuccess('SuccessFully Login Your Account');
                 navigate(from, { replace: true });
             })

@@ -14,7 +14,7 @@ const UpdateToy = () => {
         const price = form.price.value;
         const detailsDescription = form.details.value;
         const updatedToy = { availableQuantity, price, detailsDescription };
-        console.log(updateToy);
+        // console.log(updateToy);
         fetch(`http://localhost:5000/addToys/${_id}`, {
             method: 'PUT',
             headers: {
@@ -24,7 +24,7 @@ const UpdateToy = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if (data.modifiedCount > 0) {
                     Swal.fire(
                         'Good job!',

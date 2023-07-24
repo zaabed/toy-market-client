@@ -48,8 +48,8 @@ const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/addToys')
             },
             {
-                path: '/detailsToy/:id',
-                element: <ShowDetailsToy></ShowDetailsToy>,
+                path: '/myToy/:id',
+                element: <PrivateRoute><ShowDetailsToy></ShowDetailsToy></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/addToys/${params.id}`)
             },
             {

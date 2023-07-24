@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const ShowToy = ({ newToy, newToys, setNewToys }) => {
 
-    const { _id, toyName, availableQuantity, detailsDescription, photoURL, price, rating, sellerEmail, sellerName } = newToy;
+    const { _id, toyName, availableQuantity, photoURL, price, rating, sellerEmail, sellerName } = newToy;
 
     const handleToyDelete = id => {
 
@@ -65,7 +65,7 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
                         <td className='ms-20'><b>Price: ${price}</b></td>
                         <td className='ms-10'><b>Rating: {rating}</b></td>
                         <td>
-                            <Link to={`/detailsToy/${_id}`}><button className="btn bg-amber-300 btn-2xl">details</button></Link>
+                            <Link to={`/myToy/${_id}`}><button className="btn bg-amber-300 btn-2xl">details</button></Link>
                         </td>
                         <th>
                             <Link to={`/updateToy/${_id}`}><button className='text-2xl'><FaEdit /></button></Link>

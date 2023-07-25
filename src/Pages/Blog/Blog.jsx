@@ -5,14 +5,12 @@ const Blog = () => {
             <div className="collapse collapse-plus bg-purple-50">
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div className="collapse-title text-xl font-medium">
-                    Tell us the differences between uncontrolled and controlled components?
+                    What is an access token and refresh token? How do they work and where should we store them on the client-side?
                 </div>
                 <div className="collapse-content">
-                    <p>In React, controlled components refer to components that have their state and behavior controlled by the parent component. These components rely on props passed down from the parent component to update their state and behavior. Uncontrolled components refer to components that manage their own state internally.In React, a controlled component is a component that is controlled by React state, while an uncontrolled component is a component that maintains its own internal state.
+                    <p> The access token allows for access to different APIs and protected resources. The refresh token lets you mint new access tokens. You Can Store Refresh Token In Local Storage
 
-                        A controlled component receives its current value and an update callback via props, and the parent component manages the state of the component. When the user interacts with the component, the parent component updates the state, which in turn updates the  value.
-
-                        An uncontrolled component, maintains its own internal state, and when the user interacts with the component, it updates its own state, which in turn updates the  value.</p>
+                        Storing tokens in browser local storage provides persistence across page refreshes and browser tabs; however, if malicious users managed to run JavaScript in the SPA using a cross-site scripting (XSS) attack, they could retrieve the tokens stored in local storage.Auth0 recommends storing tokens in browser memory as the most secure option. Using Web Workers to handle the transmission and storage of tokens is the best way to protect the tokens, as Web Workers run in a separate global scope than the rest of the application.</p>
                 </div>
             </div>
             <div className="collapse collapse-plus bg-purple-50 mt-2">
@@ -21,29 +19,34 @@ const Blog = () => {
                     how to validate react props using propTypes?
                 </div>
                 <div className="collapse-content">
-                    <p>PropTypes are simply a mechanism that ensures that the passed value is of the correct datatype. This makes sure that we receive an error at the very end of our app by the console which might not be easy to deal with.
+                    <p>In MongoDB, aggregation operations process the data records/documents and return computed results. It collects values from various documents and groups them together and then performs different types of operations on that grouped data like sum, average, minimum, maximum, etc to return a computed result. It is similar to the aggregate function of SQL.
+                        When you need to do more complex aggregation, you can use the MongoDB aggregation pipeline. Aggregation pipelines are collections of stages that, combined with the MongoDB query syntax, will allow you to obtain an aggregated result.
 
-                        I recommend using them in short apps like projects for self-practice but it's totally up to you. For larger projects like for a client,  often a wise choice and a good practice to use them.
-
-                        There are many different types of PropTypes and all of them have their unique ES6 classes which we can use. We will discuss every type in this article.Below is an example that shows us how to use these PropTypes for type checking in our app. As we discussed already, they are defined as objects with a key and a value pair where the key is the name of the object while value contains the classes which will be used for type checking.</p>
+                        Before we dive into the code, let's understand what the aggregation pipeline itself does and how it works. In the aggregation pipeline, you list out a series of instructions in a "stage." For each stage that's defined, MongoDB executes them one after another in order to give a finalized output you're able to use.
+                    </p>
                 </div>
             </div>
             <div className="collapse collapse-plus bg-purple-50 mt-2">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                    Tell us the difference between nodejs and express js?
+                    Compare SQL and NoSQL databases?
                 </div>
                 <div className="collapse-content">
-                    <p>Node.js is an open source and cross-platform runtime environment for executing JavaScript code outside of a browser. You need to remember that NodeJS is not a framework and  not a programming language. Most of the people are confused and understand  a framework or a programming language. We often use Node.js for building back-end services like APIs like Web App or Mobile App.  used in production by large companies such as Paypal, Uber, Netflix, Walmart and so on.C, C++, JavaScript.Run-time platform or environment designed for server-side execution of JavaScript.Express is a small framework that sits on top of Node.web server functionality to simplify its APIs and add helpful new features. It makes it easier to organize your  functionality with middle ware and routing. It adds helpful utilities to Node.js's HTTP objects. It facilitates the rendering of dynamic HTTP objects. </p>
+                    <p>SQL databases are relational, and NoSQL databases are non-relational. SQL databases define and manipulate data-based structured query language (SQL).A NoSQL database has a dynamic schema for unstructured data.In almost all situations SQL databases are vertically scalable. This means that you can increase the load on a single server by increasing things like RAM, CPU, or SSD. But on the other hand, NoSQL databases are horizontally scalable. This means that you handle more traffic by sharding, or adding more servers in your NoSQL database. It is similar to adding more floors to the same building versus adding more buildings to the neighborhood. Thus NoSQL can ultimately become larger and more powerful, making these databases the preferred choice for large or ever-changing data sets.SQL databases are table-based on the other hand NoSQL databases are either key-value pairs, document-based, graph databases, or wide-column stores. This makes relational SQL databases a better option for applications that require multi-row transactions such as an accounting system or for legacy systems that were built for a relational structure. </p>
                 </div>
             </div>
             <div className="collapse collapse-plus bg-purple-50 mt-2">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                    What is a custom hook, and why will you create a custom hook?
+                    What is express js? What is Nest JS?
                 </div>
                 <div className="collapse-content">
-                    <p>Custom Hooks are typically used for local component state management and can handle specific functionality, such as form validation or API calls.Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which ensures clean code and reduces the time to write the code. It also enhances the rendering speed of the code as a custom hook does not need to be rendered again and again while rendering the whole code. </p>
+                    <p><span><b>Express JS:</b> </span> Express.js is the most popular web framework for Node.js. It is designed for building web applications and APIs and has been called the de facto standard server framework for Node.js.
+                        Building a backend from-scratch for an application in Node.js can be tedious and time consuming. From setting up ports to route handlers, writing all of the boilerplate code takes away from what really matters, which is writing the business logic for an application. By using web frameworks like Express.js, developers can save time and focus on other important tasks.
+
+                        <span><b>Nest JS: </b></span> Nest.js is one of the fastest-growing Node.js frameworks for building efficient, scalable, and enterprise-grade backend applications using Node.js. It is known for producing highly testable, maintainable, and scalable applications using modern JavaScript and TypeScript.
+
+                    </p>
                 </div>
             </div>
         </div>

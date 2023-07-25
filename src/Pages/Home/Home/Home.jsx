@@ -45,12 +45,6 @@ const Home = () => {
                 </div>
             </div>
 
-
-
-            <div>
-                <Gallery></Gallery>
-            </div>
-
             <div className='mt-20'>
                 <h1 className='text-3xl font-bold mb-7 text-center'><span className='text-purple-500'>Our Supports</span></h1>
                 <div className=' grid grid-cols-1 lg:grid-cols-4 bg-purple-50 p-5'>
@@ -84,6 +78,12 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+
+            <div>
+                <Gallery></Gallery>
+            </div>
+
 
             <div className='mt-20 grid grid-cols-1 lg:grid-cols-2'>
                 <div>

@@ -16,7 +16,7 @@ const Blog = () => {
             <div className="collapse collapse-plus bg-purple-50 mt-2">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                    how to validate react props using propTypes?
+                    What is MongoDB aggregate and how does it work
                 </div>
                 <div className="collapse-content">
                     <p>In MongoDB, aggregation operations process the data records/documents and return computed results. It collects values from various documents and groups them together and then performs different types of operations on that grouped data like sum, average, minimum, maximum, etc to return a computed result. It is similar to the aggregate function of SQL.

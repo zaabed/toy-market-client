@@ -86,14 +86,14 @@ const Home = () => {
 
 
             <div className='mt-20 grid grid-cols-1 lg:grid-cols-2'>
-                <div>
+                <div data-aos="fade-right">
                     <img src={p3} className='rounded-lg' alt="" />
                 </div>
                 <div>
                     <p>CREATIVE APPROACH</p>
                     <h1 className='text-3xl font-bold mt-7'>We help you take care of the kids</h1>
                     <p className='mt-7'>Not only do we sell toys, but we also try to make sure that your children are safe playing, learning, and having fun!</p>
-                    <img src={p1} className='rounded-lg mt-20' alt="" />
+                    <img data-aos="fade-left" src={p1} className='rounded-lg mt-20' alt="" />
                 </div>
             </div>
 

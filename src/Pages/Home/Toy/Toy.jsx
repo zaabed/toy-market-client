@@ -4,7 +4,7 @@ const Toy = ({ toy }) => {
     const { _id, name, picture_link, price, rating } = toy;
     return (
 
-        <div className="card w-96 glass">
+        <div className="card w-96 glass" data-aos="zoom-in">
             <figure><img src={picture_link} alt="car!" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>

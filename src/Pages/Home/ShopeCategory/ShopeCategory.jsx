@@ -8,7 +8,7 @@ const ShopeCategory = () => {
     // console.log(toys);
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://toy-market-website-server.vercel.app/toys')
             .then(res => res.json())
             .then(data => {
                 setToys(data)

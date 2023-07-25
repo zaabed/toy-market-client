@@ -19,7 +19,7 @@ const ShowToy = ({ newToy, newToys, setNewToys }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/addToys/${id}`, {
+                fetch(`https://toy-market-website-server.vercel.app/addToys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

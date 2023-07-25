@@ -29,17 +29,17 @@ const router = createBrowserRouter([
             {
                 path: '/:id',
                 element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-market-website-server.vercel.app/toys/${params.id}`)
             },
             {
                 path: '/allToys',
                 element: <AllToys></AllToys>,
-                loader: () => fetch('http://localhost:5000/addToys')
+                loader: () => fetch('https://toy-market-website-server.vercel.app/addToys')
             },
             {
                 path: '/allToys/:id',
                 element: <PrivateRoute><ToyInfoDetails></ToyInfoDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/addToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-market-website-server.vercel.app/addToys/${params.id}`)
             },
             {
                 path: '/blogs',
@@ -52,17 +52,17 @@ const router = createBrowserRouter([
             {
                 path: '/myToy',
                 element: <PrivateRoute><MyToy></MyToy></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/addToys')
+                loader: () => fetch('https://toy-market-website-server.vercel.app/addToys')
             },
             {
                 path: '/myToy/:id',
                 element: <PrivateRoute><ShowDetailsToy></ShowDetailsToy></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/addToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-market-website-server.vercel.app/addToys/${params.id}`)
             },
             {
                 path: '/updateToy/:id',
                 element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/addToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-market-website-server.vercel.app/addToys/${params.id}`)
             },
             {
                 path: '/signUp',
